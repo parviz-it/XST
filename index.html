@@ -1,11 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Xalqaro Siyosat Tizimi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="logo">XST</div>
+        <nav>
+            <ul>
+    <li><a href="#home" data-uz="Bosh sahifa" data-en="Home">Bosh sahifa</a></li>
+    <li><a href="#about" data-uz="Haqida" data-en="About">Haqida</a></li>
+    <li><a href="#countries" data-uz="Davlatlar" data-en="Countries">Davlatlar</a></li>
+    <li><a href="#lessons" data-uz="Darslar" data-en="Lessons">Darslar</a></li>
+    <li><a href="#news" data-uz="Yangiliklar" data-en="News">Yangiliklar</a></li>
+    <li><a href="#contact" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a></li>
+</ul>
+
+        </nav>
+    </header>
+
+   <section id="home">
+    <div class="hero">
+        <h1>Xalqara Siyosat Tizimi</h1>
+        <p>Dunyo siyosatidagi yangiliklar va tahlillar</p>
+        <button>Batafsil</button>
+    </div>
+    <div class="world-map"></div>
+</section>
+
+
+    <section id="about">
+        <h2>Haqida</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Tarix</h3>
+                <p>Siyosat tarixini o'rganing.</p>
+            </div>
+            <div class="card">
+                <h3>Hozirgi Holat</h3>
+                <p>Global siyosiy vaziyatlarni kuzating.</p>
+            </div>
+            <div class="card">
+                <h3>Hozirgi Holat</h3>
+                <p>Global siyosiy vaziyatlarni kuzating.</p>
+            </div>
+            <div class="card">
+                <h3>Analitika</h3>
+                <p>Interaktiv grafiklar orqali tahlil qiling.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lessons">
+    <h2 data-uz="Darslar" data-en="Lessons">Darslar</h2>
+    <div class="lessons-grid">
+        <div class="lesson-card">
+            <h3>Dars 1</h3>
+            <p>Bu yerga dars haqida qisqacha ma’lumot.</p>
+        </div>
+        <div class="lesson-card">
+            <h3>Dars 1</h3>
+            <p>Bu yerga dars haqida qisqacha ma’lumot.</p>
+        </div>
+        <div class="lesson-card">
+            <h3>Dars 2</h3>
+            <p>Bu yerga dars haqida qisqacha ma’lumot.</p>
+        </div>
+    </div>
+</section>
+
+<section id="news">
+    <h2 data-uz="Yangiliklar" data-en="News">Yangiliklar</h2>
+    <div class="news-grid">
+        <div class="news-card">
+            <h3>Yangilik 1</h3>
+            <p>Bu yerga yangilik haqida qisqacha ma’lumot.</p>
+        </div>
+        <div class="news-card">
+            <h3>Yangilik 1</h3>
+            <p>Bu yerga yangilik haqida qisqacha ma’lumot.</p>
+        </div>
+        <div class="news-card">
+            <h3>Yangilik 2</h3>
+            <p>Bu yerga yangilik haqida qisqacha ma’lumot.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="countries">
+        <h2>Davlatlar</h2>
+        <div class="countries-grid">
+            <div class="country-card">AQSh</div>
+            <div class="country-card">Rossiya</div>
+            <div class="country-card">Xitoy</div>
+            <div class="country-card">Buyuk Britaniya</div>
+            <div class="country-card">Fransiya</div>
+            <div class="country-card">Germaniya</div>
+        </div>
+    </section>
+
+
+    <!-- News Section -->
+<section id="news">
+  <h2>Yangiliklar</h2>
+  <div class="news-grid">
+    <div class="news-card">
+      <img src="data:image/webp;base64,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" alt="Putin" class="news-img">
+      <h3>Putinning siyosiy qarorlari</h3>
+      <p>So‘nggi yangiliklar va xalqaro siyosatdagi ta’siri.</p>
+    </div>
+    <div class="news-card">
+      <img src="https://th.bing.com/th/id/OIP.v5waSOCgQhnSYfWQEf0UVQHaHa?w=162&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="AQSh Prezidenti" class="news-img">
+      <h3>AQSh Prezidentining chiqishlari</h3>
+      <p>Amerika va xalqaro yangiliklar muhim voqealar.</p>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="contact">
+        <h2>Bog'lanish</h2>
+        <form>
+            <input type="text" placeholder="Ismingiz" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Xabar..." required></textarea>
+            <button type="submit">Yuborish</button>
+        </form>
+    </section>
+    <section id="owner-card">
+    <h2>Ulanish Aloqa</h2>
+    <div class="owner-card">
+        <h3>Telegram:</h3>
+        <p>@xst_official</p>
+
+        <h3>Instagram:</h3>
+        <p>@xst.network</p>
+
+        <h3>Email:</h3>
+        <p>xst.info@gmail.com</p>
+
+        <h3>Owner:</h3>
+        <p>Dilbek,Temurbek</p>
+    </div>
+</section>
+
+
+    <footer>
+    <p>© 2025 Xalqara Siyosat Tizimi</p>
+    <div class="footer-links">
+        <a href="https://t.me/" target="_blank">Telegram</a>
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+        <span>Email: example@mail.com</span>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

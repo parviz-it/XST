@@ -1,0 +1,494 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background: linear-gradient(120deg, #0d1b2a, #1b263b);
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(10, 25, 50, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+/* ===== World Map Background ===== */
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(10, 25, 50, 0.8), rgba(10, 25, 50, 0.8));
+    overflow: hidden;
+}
+
+.world-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1920px-World_map_-_low_resolution.svg.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.1; /* xiraroq effekt */
+    z-index: 0;
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    color: #00aaff;
+}
+
+
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(10, 25, 50, 0.8), rgba(10, 25, 50, 0.8));
+    overflow: hidden;
+    perspective: 1px; /* parallax effekt uchun */
+}
+
+.world-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1920px-World_map_-_low_resolution.svg.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+
+    /* Parallax scroll */
+    transform: translateZ(-1px) scale(2); /* orqada harakat qilishi uchun */
+}
+
+header .logo {
+    font-size: 2.5rem; /* kattaroq va ta'sirli */
+    font-weight: 900; /* juda qalin */
+    letter-spacing: 3px; 
+    background: linear-gradient(90deg, #00aaff, #00ffcc, #0077aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* jiddiy soya effekti */
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+header .logo:hover {
+    transform: scale(1.1) rotate(-2deg); /* kichik hover animatsiyasi */
+    text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+}
+
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00aaff;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00aaff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== Hero Section ===== */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(10, 25, 50, 0.8), rgba(10, 25, 50, 0.8)),
+                url('https://source.unsplash.com/1600x900/?politics,world') no-repeat center/cover;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #00aaff;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero button {
+    padding: 15px 30px;
+    border: none;
+    background: #00aaff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #0088cc;
+    transform: scale(1.05);
+}
+
+/* ===== About Section ===== */
+#about {
+    padding: 100px 50px;
+    text-align: center;
+    background: linear-gradient(120deg, #1b263b, #415a77);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00aaff;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: rgba(0, 170, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.5);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #00f0ff;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* ===== Countries Section ===== */
+#countries {
+    padding: 100px 50px;
+    background: linear-gradient(120deg, #415a77, #778da9);
+    text-align: center;
+}
+
+#countries h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00aaff;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.country-card {
+    background: rgba(0, 170, 255, 0.1);
+    padding: 50px 20px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.country-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5);
+}
+
+/* ===== Contact Section ===== */
+#contact {
+    padding: 100px 50px;
+    background: linear-gradient(120deg, #778da9, #e0e1dd);
+    color: #000;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0077aa;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #00aaff;
+    font-size: 1rem;
+    resize: none;
+}
+
+#contact form button {
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: #00aaff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact form button:hover {
+    background: #0088cc;
+    transform: scale(1.05);
+}
+
+/* ===== Lessons Section ===== */
+#lessons {
+    padding: 100px 50px;
+    text-align: center;
+    background: linear-gradient(120deg, #1b263b, #415a77);
+}
+
+#lessons h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00aaff;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.lesson-card {
+    background: rgba(0, 170, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.lesson-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5);
+}
+
+.lesson-card h3 {
+    color: #00f0ff;
+    margin-bottom: 10px;
+}
+
+.lesson-card p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* ===== News Section ===== */
+#news {
+    padding: 100px 50px;
+    text-align: center;
+    background: linear-gradient(120deg, #1b263b, #415a77);
+}
+
+#news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00aaff;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.news-card {
+    background: rgba(0, 170, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.news-card img{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5);
+}
+
+.news-card h3 {
+    color: #00f0ff;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* ===== Owner Card ===== */
+#owner-card {
+    padding: 100px 50px;
+    background: linear-gradient(120deg, #1b263b, #0d1b2a);
+    color: #fff;
+    text-align: center;
+}
+
+#owner-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00aaff;
+}
+
+.owner-card {
+    background: rgba(0, 170, 255, 0.1);
+    padding: 40px 30px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.owner-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5);
+}
+
+.owner-card h3 {
+    color: #00f0ff;
+    margin-top: 20px;
+}
+
+.owner-card p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* ===== Footer ===== */
+/* ===== Footer Links ===== */
+footer .footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+footer .footer-links a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #0088cc;
+    text-decoration: underline;
+}
+
+footer .footer-links span {
+    color: #0088cc;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 25, 50, 0.8);
+    color: #00aaff;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cards, .lessons-grid, .news-grid, .countries-grid {
+        grid-template-columns: 1fr;
+    }
+}
